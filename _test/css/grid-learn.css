@@ -1,0 +1,426 @@
+/* ============================================
+   CSS Grid Learning Page
+   ============================================ */
+
+:root {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --border: #334155;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --accent-2: #a78bfa;
+  --success: #34d399;
+  --warning: #fbbf24;
+  --danger: #f87171;
+  --radius: 0.75rem;
+  --font: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: ui-monospace, "Cascadia Code", "Fira Code", monospace;
+}
+
+#responsive{
+  background : pink
+}
+
+#alignment{
+  color: red
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+#basics1{
+  color:red
+}
+
+/* Header */
+.page-header4 {
+  background: linear-gradient(135deg, #1e3a5f, #2d1b4e);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.page-header h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.35rem;
+}
+
+.page-header p {
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+/* TOC */
+.toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.toc a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: background 0.15s, color 0.15s;
+}
+
+.toc a:hover {
+  background: var(--border);
+  color: var(--accent);
+}
+
+/* Content */
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+/* Lesson sections */
+.lesson {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.lesson h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  color: var(--accent);
+}
+
+.lesson h3 {
+  font-size: 1.1rem;
+  margin: 1.25rem 0 0.5rem;
+  color: var(--accent-2);
+}
+
+.lesson p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.lesson ul {
+  margin: 0.75rem 0 1.25rem 1.25rem;
+  color: var(--muted);
+}
+
+.lesson li {
+  margin-bottom: 0.35rem;
+}
+
+.lesson code {
+  font-family: var(--mono);
+  background: #0f172a;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.3rem;
+  font-size: 0.88em;
+  color: var(--accent);
+}
+
+/* Code blocks */
+pre {
+  background: #0b1220;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  margin: 1rem 0 1.5rem;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  color: #7dd3fc;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Demo labels */
+.demo-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin: 1.5rem 0 0.6rem;
+}
+
+/* ============================================
+   GRID DEMOS
+   ============================================ */
+
+.grid {
+  display: grid;
+  border: 2px dashed var(--border);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  background: #0b1220;
+}
+
+#basic{
+  background: red
+}
+#tracksX{
+ align-items: center
+}
+
+.item {
+  background: linear-gradient(135deg, #1e40af, #5b21b6);
+  color: white;
+  border-radius: 0.4rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  min-height: 60px;
+  text-align: center;
+}
+
+.item.small {
+  min-height: 40px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+/* 1. Basic */
+.grid-basic {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+/* 2. Tracks */
+.grid-tracks-1 {
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 0.75rem;
+}
+
+.grid-tracks-2 {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.grid-tracks-3 {
+  grid-template-columns: 200px 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.grid-tracks-4 {
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  gap: 0.75rem;
+}
+
+/* 3. Gaps */
+.grid-gaps {
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* 4. Placement */
+.grid-placement {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 70px 70px 70px;
+  gap: 0.75rem;
+}
+
+.item-span-2 {
+  grid-column: span 2;
+  background: linear-gradient(135deg, #065f46, #047857);
+}
+
+.item-tall {
+  grid-row: span 2;
+  background: linear-gradient(135deg, #9a3412, #c2410c);
+}
+
+/* 5. Grid Areas */
+.grid-areas {
+  grid-template-columns: 160px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header  header"
+    "sidebar main"
+    "footer  footer";
+  gap: 0.75rem;
+  min-height: 280px;
+}
+
+.area-header {
+  grid-area: header;
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+  color: white;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.area-sidebar {
+  grid-area: sidebar;
+  background: linear-gradient(135deg, #5b21b6, #8b5cf6);
+  color: white;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.area-main {
+  grid-area: main;
+  background: linear-gradient(135deg, #065f46, #10b981);
+  color: white;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+}
+
+.area-footer {
+  grid-area: footer;
+  background: linear-gradient(135deg, #9a3412, #f97316);
+  color: white;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 6. Alignment */
+.grid-align-center {
+  grid-template-columns: repeat(2, 120px);
+  grid-template-rows: repeat(2, 100px);
+  gap: 0.75rem;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+}
+
+.grid-align-content {
+  grid-template-columns: 80px 80px 80px;
+  gap: 0.5rem;
+  justify-content: space-between;
+  min-height: 100px;
+  align-items: center;
+}
+
+/* 7. Responsive */
+.grid-responsive {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+/* 8. auto-fill vs auto-fit */
+.grid-autofill {
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+.grid-autofit {
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+/* Cheat sheet */
+.summary {
+  border-color: var(--accent);
+}
+
+.cheat-sheet {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.cheat-item {
+  background: #0b1220;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.cheat-item code {
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+.cheat-item span {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* Footer */
+.page-footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .grid-tracks-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-areas {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "sidebar"
+      "footer";
+  }
+
+  .page-header h1 {
+    font-size: 1.75rem;
+  }
+}

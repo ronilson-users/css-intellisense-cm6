@@ -1,0 +1,153 @@
+/* =========================
+   ESTILOS GERAIS
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  padding: 30px;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* =========================
+   CLASSES SIMPLES
+========================= */
+
+.destaque {
+  background-color: #fff3cd;
+  border-left: 5px solid #ffc107;
+  padding: 12px 16px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.destaque1 {
+  background-color: #fff3cd;
+  border-left: 5px solid #ffc107;
+  padding: 12px 16px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.texto-grande {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.texto-azul {
+  color: #007bff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.fundo-cinza {
+  background-color: #e9ecef;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.titulo-principal {
+  font-size: 2.2rem;
+  color: #212529;
+  margin: 25px 0 10px;
+}
+
+.subtitulo {
+  font-size: 1.4rem;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.box {
+  background-color: #ffffff;
+  border: 2px solid #dee2e6;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 25px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.texto-centralizado {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #495057;
+}
+
+.destaque-texto {
+  background-color: #ffeb3b;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: bold;
+  color: #333;
+}
+
+.botao {
+  display: inline-block;
+  background-color: #0d6efd;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+  background-color: #0b5ed7;
+}
+
+/* =========================
+   ID (identificador único)
+========================= */
+
+#titulo-principal {
+  border-bottom: 3px solid #0d6efd;
+  padding-bottom: 8px;
+}
+
+#btn-acao {
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.35);
+}
+
+/* =========================
+   CLASSES ANINHADAS
+   (seletores descendentes)
+========================= */
+
+.box .texto-internos {
+  margin-top: 12px;
+  color: #198754;
+  font-style: italic;
+  border-top: 1px dashed #ced4da;
+  padding-top: 12px;
+}
+
+.card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  margin-top: 30px;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.card .card-titulo {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 8px;
+}
+
+.card .card-texto {
+  font-size: 1rem;
+  opacity: 0.95;
+}
