@@ -1,5 +1,5 @@
 {
-  "name": "acode-plugin",
+  "name": "Css intellisense Acode",
   "version": "1.0.0",
   "description": "JavaScript template for Acode plugins",
   "main": "dist/main.js",
