@@ -1,12 +1,12 @@
 {
   "$schema": "https://acode.app/schema/plugin/v0.1.0.json",
-  "id": "cm.rsj_ronillson",
+  "id": "cm.rsj_ronillson.cssIntellisense",
   "name": "Css Intellisense",
   "main": "main.js",
   "version": "1.0.0",
   "readme": "README.md",
   "changelogs": "changelog.md",
-  "repository": "https://github.com/Acode-Foundation/acode-plugin.git",
+  "repository": "https://github.com/ronilson-users/css-intellisense-cm6",
   "icon": "icon.png",
  "files": [],
   "minVersionCode": 950,
@@ -17,6 +17,6 @@
   "author": {
     "name": "Rsj",
     "email": "ronilson.stos@gmail.com",
-    "github": ""
+    "github": "https://github.com/ronilson-users/css-intellisense-cm6"
   }
 }
